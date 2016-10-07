@@ -5,7 +5,7 @@
 :OUTPUT ACCEPT [0:0]
 :LOGGING - [0:0]
 # Web server and ssh server
--A INPUT -i eth0 -p tcp -m multiport --dports 22,443,80 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A INPUT -i eth0 -p tcp -m multiport --dports 22,443,8080 -m state --state NEW,ESTABLISHED -j ACCEPT
 # Allow already established tcp & udp connections
 -A INPUT -i eth0 -p tcp -m tcp -m state --state ESTABLISHED -j ACCEPT
 -A INPUT -i eth0 -p udp -m udp -m state --state ESTABLISHED -j ACCEPT
